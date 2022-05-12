@@ -9,11 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ApiReaderApplication {
 
-	@GetMapping("/welcome")
-	public String welcome() {
-		return "Spring Boot Docker Demo";
-	}
-
 	public static void main(String[] args) {
 		SpringApplication.run(ApiReaderApplication.class, args);
 	}
