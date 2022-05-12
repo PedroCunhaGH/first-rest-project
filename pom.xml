@@ -13,7 +13,7 @@
 	<name>API-Reader</name>
 	<description>Spring Boot for API Reading + Docker</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>18</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
