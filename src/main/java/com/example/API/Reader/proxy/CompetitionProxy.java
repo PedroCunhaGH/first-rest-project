@@ -18,5 +18,7 @@ public interface CompetitionProxy {
     @RequestMapping(method = RequestMethod.GET, value = "/v2/competitions")
     @Headers(value = "Content-Type: application/json")
 
-    public List<Competition> getCompetitions(@RequestParam("id") Integer id);
+    public static List<Competition> getCompetitions(@RequestParam("id") Integer id) {
+        return null;
+    }
 }
