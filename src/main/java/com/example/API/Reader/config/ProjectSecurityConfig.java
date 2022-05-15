@@ -15,6 +15,7 @@ public class ProjectSecurityConfig extends WebSecurityConfigurerAdapter {
             http.csrf().disable()
                 .authorizeRequests()
                 .mvcMatchers("/dashboard").authenticated()
+                .mvcMatchers("/usersTable").hasRole("ADMIN")
                 .mvcMatchers("/home").permitAll()
                 .mvcMatchers("/login").permitAll()
                 .and().formLogin().loginPage("/login")
