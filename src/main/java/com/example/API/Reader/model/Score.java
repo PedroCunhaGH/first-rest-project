@@ -4,8 +4,8 @@ import lombok.Data;
 
 @Data
 public class Score {
-    private String winner; //Enum? HOME_TEAM, AWAY_TEAM
-    private String duration; //Enum? REGULAR, EXTRATIME, PENALTIES
+    private Winner winner; // Enum? HOME_TEAM, AWAY_TEAM
+    private String duration; // Enum? REGULAR, EXTRATIME, PENALTIES
     private Goals fullTime;
     private Goals halfTime;
     private Goals extraTime;
