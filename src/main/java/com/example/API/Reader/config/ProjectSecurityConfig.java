@@ -18,13 +18,14 @@ public class ProjectSecurityConfig extends WebSecurityConfigurerAdapter {
                 .mvcMatchers("/usersTable").hasRole("ADMIN")
                 .mvcMatchers("/home").permitAll()
                 .mvcMatchers("/login").permitAll()
+                .mvcMatchers("/public/**").permitAll()
                 .and().formLogin().loginPage("/login")
                 .defaultSuccessUrl("/dashboard").failureUrl("/login?error=true").permitAll()
                 .and().logout().logoutSuccessUrl("/login?logout=true").invalidateHttpSession(true).permitAll()
                 .and().httpBasic();
 
     }
-
+    /**
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
@@ -32,6 +33,6 @@ public class ProjectSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .withUser("admin").password("54321").roles("USER", "ADMIN")
                 .and().passwordEncoder(NoOpPasswordEncoder.getInstance());
-    }
+    } */
 
 }

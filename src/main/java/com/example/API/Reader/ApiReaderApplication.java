@@ -15,20 +15,23 @@ public class ApiReaderApplication implements CommandLineRunner {
 
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
+	
 
 	public static void main(String[] args) {
 		SpringApplication.run(ApiReaderApplication.class, args);
 	}
 
+
+	
 	@Override
 	public void run(String... args) throws Exception {
-		String sql = "INSERT INTO person (name, role, pwd) VALUES (?, ?, ?)";
-		int result = jdbcTemplate.update(sql, "Castro","USER","q");
+		String sql = "REPLACE INTO person (name, role, pwd) VALUES (?, ?, ?)";
+		int result = jdbcTemplate.update(sql, "admin","ADMIN","admin");
 
 		if (result > 0){
-			System.out.println("a new row has been inserted.");
+			System.out.println("A new ROLE_ADMIN account has been inserted.");
 		}
 		
-	}
+	}  
 
 }
