@@ -1,1 +1,0 @@
-INSERT INTO `person` (`name`,`role`,`pwd`) VALUES (' Bruno','USER','1234');
