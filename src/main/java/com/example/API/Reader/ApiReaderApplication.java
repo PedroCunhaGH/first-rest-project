@@ -11,7 +11,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 @SpringBootApplication
 @EnableFeignClients(basePackages = "com.example.API.Reader.proxy")
 @EnableJpaRepositories(basePackages = "com.example.API.Reader.repository")
-public class ApiReaderApplication implements CommandLineRunner {
+public class ApiReaderApplication  {
 
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
@@ -22,7 +22,7 @@ public class ApiReaderApplication implements CommandLineRunner {
 	}
 
 
-	
+	/** 
 	@Override
 	public void run(String... args) throws Exception {
 		String sql = "REPLACE INTO person (name, role, pwd) VALUES (?, ?, ?)";
@@ -32,6 +32,6 @@ public class ApiReaderApplication implements CommandLineRunner {
 			System.out.println("A new ROLE_ADMIN account has been inserted.");
 		}
 		
-	}  
+	}  */
 
 }

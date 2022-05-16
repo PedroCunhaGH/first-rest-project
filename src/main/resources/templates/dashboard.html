@@ -10,7 +10,7 @@ Author URL: http://w3layouts.com
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Eazy School - Best Educational Institute for your Child</title>
+    <title> Football Data</title>
     <!-- Google fonts -->
     <link href="//fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- Template CSS Style link -->
@@ -75,6 +75,33 @@ Author URL: http://w3layouts.com
     </div>
 </div>
 <!-- //Display Users-->
+
+<!-- //Display Favs-->
+<div class="container py-md-5 py-4">
+    <div class="section__content section__content--p30">
+        <div class="container-fluid">
+            <div class="row m-t-25">
+                <div class="col-sm-6 col-lg-3" sec:authorize="hasRole('ROLE_USER')">
+                    <a th:href="@{/favsTable}">
+                    <div class="overview-item overview-item--c3">
+                        <div class="overview__inner">
+                            <div class="overview-box clearfix">
+                                <div class="icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="text">
+                                    <h2>Favorites</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Display Favs-->
 
 
 <!-- Js scripts -->

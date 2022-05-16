@@ -27,10 +27,10 @@ Author URL: http://w3layouts.com
 <section class="inner-banner py-5">
     <div class="w3l-breadcrumb py-lg-5">
         <div class="container pt-4 pb-sm-4">
-            <h4 class="inner-text-title pt-5">Users Table</h4>
+            <h4 class="inner-text-title pt-5">Favourites</h4>
             <ul class="breadcrumbs-custom-path">
                 <li><a th:href="@{/home}">Home</a></li>
-                <li class="active"><i class="fas fa-angle-right"></i>Users</li>
+                <li class="active"><i class="fas fa-angle-right"></i>Favourites</li>
             </ul>
         </div>
     </div>
@@ -42,27 +42,39 @@ Author URL: http://w3layouts.com
     <div class="table-responsive-md">
         <div class="row mb-4">
             <div class="col-md-7">
-                <h3 class="heading-21921">Users</h3>
+                <h3 class="heading-21921">Favorites</h3>
             </div>
         </div>
         <table class="table table-striped table-hover">
             <thead class="table-dark">
             <tr>
-                <th scope="col">UserID</th>
-                <th scope="col">Username</th>
-                <th scope="col">Role</th>
-                <th scope="col"></th>
+                <th scope="col">Favourite Teams</th>
             </tr>
             </thead>
-            
-            
             <tbody>
-            <tr th:each="user: ${users}">
-                <td th:text="${user.personID}"></td>
-                <td th:text="${user.name}"></td>
-                <td th:text="${user.role}"></td>
+            <tr th:each="team: ${favTeams}">
+                <td th:text="${team.name}"></td>
             </tr>
             </tbody>
+
+        <table class="table table-striped table-hover">
+            <thead class="table-dark">
+            <tr>
+                <th scope="col">Favourite Competitions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="team: ${favTeams}">
+                <td th:text="${team.name}"></td>
+            </tr>
+            </tbody>
+
+
+            
+
+            
+
+            
         
             
         </table>

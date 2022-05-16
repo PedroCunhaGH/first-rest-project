@@ -22,7 +22,7 @@ public class UsersTableController {
     @RequestMapping(value = "/usersTable", method = { RequestMethod.GET})
     public String getAll(Model model){
         model.addAttribute("users",usersRepository.findAll());
-        //System.out.println(model);
+        System.out.println(model);
         return "usersTable.html";
     }
 

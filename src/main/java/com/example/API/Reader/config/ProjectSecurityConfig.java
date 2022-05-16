@@ -19,6 +19,7 @@ public class ProjectSecurityConfig extends WebSecurityConfigurerAdapter {
                 .mvcMatchers("/home").permitAll()
                 .mvcMatchers("/login").permitAll()
                 .mvcMatchers("/public/**").permitAll()
+                .mvcMatchers("/favsTable").permitAll()
                 .and().formLogin().loginPage("/login")
                 .defaultSuccessUrl("/dashboard").failureUrl("/login?error=true").permitAll()
                 .and().logout().logoutSuccessUrl("/login?logout=true").invalidateHttpSession(true).permitAll()
