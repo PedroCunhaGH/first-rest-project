@@ -8,7 +8,7 @@ import lombok.Data;
 public class Competition {
 
     private Integer id;
-    private Area area;
+    //private Area area;
     private String name;
     private Boolean code;
     private String plan;
