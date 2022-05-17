@@ -1,8 +1,7 @@
 package com.example.API.Reader.controller;
 
 import com.example.API.Reader.model.Person;
-import com.example.API.Reader.model.favTeams;
-import com.example.API.Reader.repository.TeamRepository;
+import com.example.API.Reader.repository.LeagueRepository;
 import com.example.API.Reader.repository.UsersRepository;
 import org.springframework.security.core.Authentication;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class FavsTableController {
     
     @Autowired
-    TeamRepository teamRepository;
+    LeagueRepository teamRepository;
     @Autowired
     UsersRepository usersRepository;
 

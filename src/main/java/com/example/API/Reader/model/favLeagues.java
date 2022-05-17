@@ -14,11 +14,11 @@ import lombok.Data;
 
 @Data
 @Entity
-public class favTeams {
+public class favLeagues {
 
     @Id
-    @Column(name = "teamID")
-    private Integer teamID;
+    @Column(name = "leagueID")
+    private Integer leagueID;
 
     @OneToOne(fetch = FetchType.EAGER,cascade = CascadeType.PERSIST, targetEntity = Person.class)
     @JoinColumn(name = "personID", referencedColumnName = "personID",nullable = false)
@@ -26,5 +26,8 @@ public class favTeams {
     
     @Column(name= "name")
     private String name;
+
+    @Column(name= "country")
+    private String country;
     
 }

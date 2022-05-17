@@ -27,67 +27,62 @@ Author URL: http://w3layouts.com
             <div class="container py-4">
                 <div class="row align-items-center pt-sm-5 pt-4">
                     <div class="page">
-                        <h1>Leagues</h1>
+                        <h1>Standings</h1>
                         <table class="layout display responsive-table">
                            <thead>
                                <tr>
-                                   <th >Country</th>
-                                   <th colspan="3">League</th>
+                                   <th >Position</th>
+                                   <th >Club</th>
+                                   <th >Played</th>
+                                   <th >Won</th>
+                                   <th >Drawn</th>
+                                   <th >Lost</th>
+                                   <th ><b>Points</b></th>
                                </tr>
                            </thead>
                            <tbody>
                        
                                <tr>
-                                   <td class="organisationname">England</td>
-                                   <td class="organisationname">Premier League</td>
+                                   <td class="organisationnumber">1</td>
+                                   <td class="organisationname"> City</td>
+                                   <td class="organisationnumber">30</td>
+                                   <td class="organisationnumber">20</td>
+                                   <td class="organisationnumber">5</td>
+                                   <td class="organisationnumber">5</td>
+                                   <td class="organisationnumber"><b>95</b></td>
                                    <td class="actions">
-                                       <a th:href="@{/standings}" class="edit-item" title="Edit">Open</a>
-                                    </td>
-                                    <td class="actions">
-                                       <a th:href="@{/standings}" class="fas fa-star"></a>
+                                       <a href="?" class="fas fa-star"></a>
                                    </td>
                                </tr>
                        
                                <tr>
-                                   <td class="organisationname">Germany</td>
-                                   <td class="organisationname">Bundesliga</td>
-                                   <td class="actions">
-                                        <a th:href="@{/standings}" class="edit-item" title="Edit">Open</a>
-                                    </td>
-                                    <td class="actions">
-                                        <a th:href="@{/standings}" class="fas fa-star"></a>
-                                    </td>
-                               </tr>
-                       
-                               <tr>
-                                   <td class="organisationname">Portugal</td>
-                                   <td class="organisationname">Primeira Liga</td>
-                                   <td class="actions">
-                                        <a href="?" class="edit-item" title="Edit">Open</a>
-                                    </td>
-                                    <td class="actions">
-                                        <a href="?" class="fas fa-star"></a>
-                                    </td>
-                               </tr>
+                                <td class="organisationnumber">2</td>
+                                <td class="organisationname"> United</td>
+                                <td class="organisationnumber">30</td>
+                                <td class="organisationnumber">20</td>
+                                <td class="organisationnumber">5</td>
+                                <td class="organisationnumber">5</td>
+                                <td class="organisationnumber"><b>95</b></td>
+                                <td class="actions">
+                                    <a href="?" class="fas fa-star"></a>
+                                </td>
+                            </tr>
 
                            </tbody>
                        </table>
                     </div>
 
-
-
-
-
-
-
-
                 </div>
+                
+            </div>
+            <div class="col-md-2 login-center text-start">
+                <a th:href="@{/home}">
+                <button class="btn btn-style btn-style-3 text-left">BACK</button>
+                </a>
             </div>
         </div>
     </section>
     <!-- //banner section -->
-
-
 
     <!-- common jquery plugin -->
     <script src="assets/js/jquery-3.3.1.min.js"></script>
