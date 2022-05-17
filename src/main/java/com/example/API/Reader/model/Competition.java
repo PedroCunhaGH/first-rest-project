@@ -8,10 +8,12 @@ import lombok.Data;
 public class Competition {
 
     private Integer id;
+    private Area area;
     private String name;
     private Boolean code;
     private String plan;
-    private List<Season> currentSeason;
+    private Season currentSeason;
+    private List<Season> seasons;
     private String numberOfAvailableSeasons;
 
 }
