@@ -1,7 +1,9 @@
 package com.example.API.Reader.controller;
 
 
+import com.example.API.Reader.model.League;
 import com.example.API.Reader.model.Standings;
+import com.example.API.Reader.proxy.LeagueProxy;
 import com.example.API.Reader.proxy.StandingsProxy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,14 +14,14 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class StandingsController {
+public class LeagueController {
 
     @Autowired
-    StandingsProxy standingsProxy;
+    LeagueProxy leagueProxy;
 
-    @GetMapping("leagues/{id}/standings?season={year}&sort=asc")
-    public List<Standings> getStandings(@PathVariable("id") String id, @RequestParam("year") Integer year){
-        return standingsProxy.getStandings("por.1", 2020);
+    @GetMapping("leagues/{id}")
+    public List<League> getLeague(@PathVariable("id") String id){
+        return leagueProxy.getLeague("por.1");
     }
 
 }
