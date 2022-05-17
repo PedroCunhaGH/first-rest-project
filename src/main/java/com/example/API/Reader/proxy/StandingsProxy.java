@@ -7,6 +7,8 @@ import com.example.API.Reader.model.League;
 
 import com.example.API.Reader.model.Standings;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,11 +20,11 @@ configuration = ProjectConfiguration.class)
 
 public interface StandingsProxy {
 
-@RequestMapping(method = RequestMethod.GET, value = "leagues/{id}/standings?season={year}&sort=asc")
-@Headers(value = "Content-Type: application/json")
+    @RequestMapping(method = RequestMethod.GET, value = "leagues/{id}/standings?season={year}&sort=asc")
+    @Headers(value = "Content-Type: application/json")
 
-public static List<Standings> getStandings(@RequestParam("id") String id, @RequestParam("year") Integer year)
-    {
-        return null;
-    }
+    public List<Standings> getStandings(@PathVariable("id") String id, @RequestParam("year") Integer year);
+
+
+
 }
