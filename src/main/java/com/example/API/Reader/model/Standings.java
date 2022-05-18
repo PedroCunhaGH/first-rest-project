@@ -10,7 +10,7 @@ import java.util.List;
 public class Standings {
 
     private League league;
-    private List<Team> teams=new ArrayList<Team>();
+    private List<Team> teams;
     private Note note;
 
 }

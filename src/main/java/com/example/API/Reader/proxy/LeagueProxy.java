@@ -1,10 +1,6 @@
 package com.example.API.Reader.proxy;
 
-import java.util.List;
-
 import com.example.API.Reader.config.FeignConfig;
-import com.example.API.Reader.config.ProjectConfiguration;
-import com.example.API.Reader.model.DataLeague;
 import com.example.API.Reader.model.League;
 
 import org.springframework.cloud.openfeign.FeignClient;
