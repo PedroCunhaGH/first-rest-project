@@ -1,6 +1,5 @@
 package com.example.API.Reader.rest;
 
-import com.example.API.Reader.model.DataLeague;
 import com.example.API.Reader.model.League;
 import com.example.API.Reader.proxy.LeagueProxy;
 import org.springframework.beans.factory.annotation.Autowired;

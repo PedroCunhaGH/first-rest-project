@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.example.API.Reader.config.FeignConfig;
 import com.example.API.Reader.model.League;
+import com.example.API.Reader.model.LeagueList;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +18,6 @@ public interface AllLeaguesProxy {
     @RequestMapping(method = RequestMethod.GET, value = "/leagues/")
     @Headers(value = "Content-Type: application/json")
 
-    public List<League> getAllLeagues();
+    public LeagueList getAllLeagues();
 
 }

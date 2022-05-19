@@ -3,6 +3,7 @@ package com.example.API.Reader.rest;
 import java.util.List;
 
 import com.example.API.Reader.model.League;
+import com.example.API.Reader.model.LeagueList;
 import com.example.API.Reader.proxy.AllLeaguesProxy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -20,7 +21,7 @@ public class AllLeaguesRestController {
 
     @GetMapping
     @ResponseBody
-    public List<League> getAllLeagues() {
+    public LeagueList getAllLeagues() {
         return allLeaguesProxy.getAllLeagues();
     }
 
