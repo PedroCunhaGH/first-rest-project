@@ -13,9 +13,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 public interface StandingsProxy {
 
-    @RequestMapping(method = RequestMethod.GET, value = "/leagues/{id}/standings?season={year}&sort=asc")
+    @RequestMapping(method = RequestMethod.GET, value = "/leagues/{id}/standings")
     @Headers(value = "Content-Type: application/json")
 
-    public Standings getStanding(@PathVariable("id") String id, @RequestParam("year") Integer year);
+    public Standings getStanding(@PathVariable("id") String id, @RequestParam("season") Integer year,
+                                 @RequestParam(name= "sort", defaultValue = "asc", required = false) String sort);
 
 }

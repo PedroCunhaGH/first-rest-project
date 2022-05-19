@@ -14,10 +14,12 @@ public class StandingsRestController {
     @Autowired
     StandingsProxy standingsProxy;
 
-    @GetMapping("{id}/standings?season={year}&sort=asc")
+    @GetMapping("{id}/standings")
     @ResponseBody
-    public Standings getStanding(@PathVariable("id") String id, @RequestParam("year") Integer year) {
-        return standingsProxy.getStanding(id, year);
+    public Standings getStanding(@PathVariable("id") String id, @RequestParam(name= "sort", defaultValue = "asc", required = false) String sort,
+                                 @RequestParam("season") Integer year) {
+
+        return standingsProxy.getStanding(id, year, sort);
     }
 
 }
