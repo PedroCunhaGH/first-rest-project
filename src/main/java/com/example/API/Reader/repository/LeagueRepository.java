@@ -4,8 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-import com.example.API.Reader.model.DataLeague;
-import com.example.API.Reader.model.League;
 import com.example.API.Reader.model.Person;
 import com.example.API.Reader.model.favLeagues;
 
