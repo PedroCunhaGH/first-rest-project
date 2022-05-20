@@ -6,6 +6,6 @@ import lombok.Data;
 public class Standings {
 
     private boolean status;
-    private DataSeason dataSeason;
+    private DataSeason data;
 
 }

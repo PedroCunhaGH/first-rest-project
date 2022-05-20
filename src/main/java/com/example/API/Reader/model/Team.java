@@ -8,8 +8,8 @@ public class Team {
 
     private Integer id;
     private String uid;
-    private String name;
     private String location;
+    private String name;
     private String abbreviation;
     private String displayName;
     private String shortDisplayName;

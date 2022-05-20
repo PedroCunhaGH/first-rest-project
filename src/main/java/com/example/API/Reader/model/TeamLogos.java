@@ -7,7 +7,7 @@ public class TeamLogos {
 
     private String href;
     private Integer width;
-    private Integer heigth;
+    private Integer height;
     private String alt;
     private Rel rel;
     private String lastUpdated;

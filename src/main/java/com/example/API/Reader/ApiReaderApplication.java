@@ -14,8 +14,6 @@ public class ApiReaderApplication  {
 
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
-	
-
 	public static void main(String[] args) {
 
 		SpringApplication.run(ApiReaderApplication.class, args);

@@ -6,6 +6,7 @@ import lombok.Data;
 @Data
 public class Note {
 
+    private String color;
     private Description description;
     private Integer rank;
 
