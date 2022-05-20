@@ -7,6 +7,7 @@ import lombok.Data;
 @Data
 public class LeagueList {
 
-    public List<League> leagueList;
+    private boolean status;
+    private List<DataLeague> data;
 
 }
