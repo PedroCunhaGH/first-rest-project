@@ -32,7 +32,7 @@ Author URL: http://w3layouts.com
                            <thead>
                                <tr>
                                    <th >Abbreviation</th>
-                                   <th colspan="3">League</th>
+                                   <th colspan="3">Name</th>
                                </tr>
                            </thead>
                            <tbody>
@@ -43,7 +43,7 @@ Author URL: http://w3layouts.com
                                  </td>
                                 <td th:text="${leagues.name}"></td>
                                 <td class="actions">
-                                    <a th:href="@{/}" class="fas fa-star"></a>
+                                    <a th:href="@{/insertFav(leagueID=${leagues.id})}" class="fas fa-star"></a>
                                 </td>
                             </tr>
                        

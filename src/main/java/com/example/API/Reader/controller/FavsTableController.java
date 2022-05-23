@@ -23,6 +23,7 @@ public class FavsTableController {
         String authName = authentication.getName();
         Person person = usersRepository.readByName(authName);
         model.addAttribute("favTeams",teamRepository.findByPersonID(person));
+        System.out.println("TESTE"+model);
         return "favsTable.html";
     }
     

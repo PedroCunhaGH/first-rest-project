@@ -49,13 +49,13 @@ Author URL: http://w3layouts.com
             <thead class="table-dark">
             <tr>
                 <th scope="col">League</th>
-                <th scope="col">Country</th>
+                <!-- <th scope="col">Country</th> -->
             </tr>
             </thead>
             <tbody>
             <tr th:each="team: ${favTeams}">
-                <td th:text="${team.name}"></td>
-                <td th:text="${team.country}"></td>
+                <td th:text="${team.leagueID}"></td>
+                 <!-- <td th:text="${team.country}"></td> -->
             </tr>
             </tbody>
 

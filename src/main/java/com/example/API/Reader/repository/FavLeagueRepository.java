@@ -7,10 +7,12 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.transaction.annotation.Transactional;
 
-public interface UsersRepository extends JpaRepository<Person,Integer> {
+public interface FavLeagueRepository extends JpaRepository<Person,Integer> {
     
-    Person readByName(String name);
 
-
+    @Transactional
+    @Modifying
+    @Query(value="INSERT INTO Fav_Leagues (personID, leagueID) VALUES (?1, ?2)", nativeQuery = true)
+    int insertIntoFavs(int personID, String id);
 
 }

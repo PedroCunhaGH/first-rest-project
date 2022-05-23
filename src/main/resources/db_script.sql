@@ -10,16 +10,19 @@ CREATE TABLE IF NOT EXISTS `person` (
 );
 
 CREATE TABLE IF NOT EXISTS `Fav_Leagues` (
-  `personID` int NOT NULL AUTO_INCREMENT,
-  `leagueID` int,
-  `name` varchar(100) NOT NULL,
-  `country` varchar(100) NOT NULL,
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `personID` int NOT NULL,
+  `leagueID` varchar(100) NOT NULL,
+  -- `name` varchar(100) NOT NULL,
+  -- `abbv` varchar(100) NOT NULL,
   FOREIGN KEY (`personID`) references person(`personID`),
-  PRIMARY KEY (`leagueID`)
+  PRIMARY KEY (`ID`)
 );
 
 INSERT INTO `person` (`name`,`role`,`pwd`) VALUES ('admin','ADMIN','admin');
 INSERT INTO `person` (`name`,`role`,`pwd`) VALUES ('user','USER','user');
 
-INSERT INTO `Fav_Leagues` (`personID`, `leagueID`, `name`, `country`) VALUES ('2', '1', 'Primeira Liga', 'Portugal');
-INSERT INTO `Fav_Leagues` (`personID`, `leagueID`, `name`, `country`) VALUES ('2', '2', 'Bundesliga', 'Germany');
+-- INSERT INTO `Fav_Leagues` (`personID`, `leagueID`, `name`, `abbv`) VALUES ('2', '1', 'Primeira Liga', 'Por');
+-- INSERT INTO `Fav_Leagues` (`personID`, `leagueID`, `name`, `abbv`) VALUES ('2', '2', 'Bundesliga', 'Ger');
+
+-- INSERT INTO `Fav_Leagues` (`personID`, `leagueID`, `name`, `abbv`) VALUES ('2', '2', 'Bundesliga', 'Ger');

@@ -18,16 +18,17 @@ public class favLeagues {
 
     @Id
     @Column(name = "leagueID")
-    private Integer leagueID;
+    private String leagueID;
 
     @OneToOne(fetch = FetchType.EAGER,cascade = CascadeType.PERSIST, targetEntity = Person.class)
     @JoinColumn(name = "personID", referencedColumnName = "personID",nullable = false)
     private Person personID;
     
+    /**
     @Column(name= "name")
     private String name;
 
-    @Column(name= "country")
-    private String country;
-    
+    @Column(name= "abbv")
+    private String abbv;
+     */
 }
