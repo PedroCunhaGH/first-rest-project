@@ -7,7 +7,7 @@ import lombok.Data;
 public class Note {
 
     private String color;
-    //private Description description;
+    private String description;
     private Integer rank;
 
 }
