@@ -10,6 +10,5 @@ public class DataSeason {
     private String abbreviation;
     private String seasonDisplay;
     private Integer season;
-    private List<DataStandings> dataStandings;
-
+    private List<DataStandings> standings;
 }

@@ -16,7 +16,7 @@ public class StandingsRestController {
     @GetMapping("{id}/standings")
     @ResponseBody
     public Standings getStanding(@PathVariable("id") String id, @RequestParam("season") Integer year,
-            @RequestParam(name = "sort", defaultValue = "asc", required = false) String sort) {
+                                 @RequestParam(name = "sort", defaultValue = "asc", required = false) String sort) {
 
         return standingsProxy.getStanding(id, year, sort);
     }

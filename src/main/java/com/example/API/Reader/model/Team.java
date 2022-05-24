@@ -14,7 +14,7 @@ public class Team {
     private String displayName;
     private String shortDisplayName;
     private boolean isActive;
-    private TeamLogos logos;
+    //private TeamLogos logos;
     /*
      * private List<Player> lineup=new ArrayList<Player>();
      * private List<Player> bench=new ArrayList<Player>();
