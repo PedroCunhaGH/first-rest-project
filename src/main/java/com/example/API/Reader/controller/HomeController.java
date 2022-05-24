@@ -39,13 +39,13 @@ public class HomeController {
     }
 
     @RequestMapping(value="/insertFav")
-    public String insertFav(Authentication authentication, @RequestParam String leagueID){
+    public String insertFav(Authentication authentication, @RequestParam String leagueName){
         if(authentication != null){
             Person person = usersRepository.readByName(authentication.getName());
         
             System.out.println(person);
-            System.out.println(leagueID);
-            teamRepository.insertIntoFavs(person.getPersonID(), leagueID);
+            System.out.println(leagueName);
+            teamRepository.insertIntoFavs(person.getPersonID(), leagueName);
             return "success.html";
         }
         else return "login.html";
