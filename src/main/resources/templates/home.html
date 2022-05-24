@@ -39,7 +39,7 @@ Author URL: http://w3layouts.com
 
                             <tr th:each="leagues: ${leagues}">
                                 <td class="actions">
-                                    <a th:href="@{/standings}" th:text="${leagues.abbr}">
+                                    <a th:href="@{/standings(id=${leagues.id})}" th:text="${leagues.abbr}">
                                  </td>
                                 <td th:text="${leagues.name}"></td>
                                 <td class="actions">
