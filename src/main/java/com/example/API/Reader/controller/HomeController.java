@@ -33,7 +33,6 @@ public class HomeController {
     @RequestMapping(value={"","/","home"})
     public String displayLeagues(Model model){
         LeagueList leagues = leagueservice.getLeagues();
-        //System.out.println(leagues.getData());
         model.addAttribute("leagues", leagues.getData());
         return "home.html";
     }
@@ -43,9 +42,8 @@ public class HomeController {
         if(authentication != null){
             Person person = usersRepository.readByName(authentication.getName());
         
-            System.out.println(person);
-            System.out.println(leagueName);
             teamRepository.insertIntoFavs(person.getPersonID(), leagueName);
+            
             return "success.html";
         }
         else return "login.html";

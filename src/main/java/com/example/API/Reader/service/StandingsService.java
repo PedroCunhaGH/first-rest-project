@@ -11,7 +11,6 @@ public class StandingsService {
     
     
     public Standings getStandings(String id){
-        System.out.println("TESTE "+id);
 
         RestTemplate restTemplate = new RestTemplate();
         RestTemplateBuilder restTemplateBuilder = new RestTemplateBuilder();
@@ -19,7 +18,6 @@ public class StandingsService {
 
         Standings standings = restTemplate.getForObject("http://localhost:8081/api/leagues/{id}/standings?season=2021", Standings.class, id);
         
-        System.out.println(standings);
         return standings;
         
     }

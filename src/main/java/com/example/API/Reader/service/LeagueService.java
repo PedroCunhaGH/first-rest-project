@@ -18,7 +18,6 @@ public class LeagueService {
 
         LeagueList leagues = restTemplate.getForObject("http://localhost:8081/api/leagues", LeagueList.class);
         
-        //System.out.println(leagues);
         return leagues;
         
     }
