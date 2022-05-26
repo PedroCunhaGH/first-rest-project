@@ -12,7 +12,7 @@ public interface FavLeagueRepository extends JpaRepository<Person,Integer> {
 
     @Transactional
     @Modifying
-    @Query(value="INSERT INTO Fav_Leagues (personID, leagueID) VALUES (?1, ?2)", nativeQuery = true)
+    @Query(value="INSERT INTO fav_leagues (personID, leagueID) VALUES (?1, ?2)", nativeQuery = true)
     int insertIntoFavs(int personID, String id);
 
 }
