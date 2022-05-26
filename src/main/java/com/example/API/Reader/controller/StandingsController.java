@@ -20,9 +20,7 @@ public class StandingsController {
     public String displayStandings(Model model, @RequestParam String id){
 
         Standings standings = standingsService.getStandings(id);
-        System.out.println(standings.getData().getStandings());
         model.addAttribute("standings", standings.getData().getStandings());
-        //model.addAttribute("stats", standings.getData().get);
         return "standings.html";
     }
     

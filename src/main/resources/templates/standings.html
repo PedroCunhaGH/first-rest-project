@@ -55,7 +55,7 @@ Author URL: http://w3layouts.com
 
                             <tr th:each="standings: ${standings}">
                                 <td th:text="${standingsStat.count}"></td>
-                                <td th:text="${standings.team.shortDisplayName}"></td>
+                                <td th:text="${standings.team.displayName}"></td>
                                 <td th:text="${standings.Stats[3].value}"></td>
                                 <td th:text="${standings.Stats[0].value}"></td>
                                 <td th:text="${standings.Stats[2].value}"></td>
