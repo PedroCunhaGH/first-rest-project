@@ -13,9 +13,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 public class ApiReaderApplication  {
 
 	public static void main(String[] args) {
-
 		SpringApplication.run(ApiReaderApplication.class, args);
-
 	}
 
 

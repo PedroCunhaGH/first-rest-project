@@ -1,0 +1,27 @@
+version: '3'
+services:
+  backend:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    depends_on:
+      - mysql
+    environment:
+      DATABASE_URL: jdbc:mysql://mysql:3306/sports
+      DATABASE_USERNAME: thelooptech
+      DATABASE_PASSWORD: thelooptech
+    ports:
+      - 8081:8081
+
+  mysql:
+    image: mysql:8
+    environment:
+      MYSQL_USER: thelooptech
+      MYSQL_PASSWORD: thelooptech
+      MYSQL_DATABASE: sports
+      MYSQL_ROOT_PASSWORD: thelooptech
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
