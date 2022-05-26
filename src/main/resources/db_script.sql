@@ -1,4 +1,8 @@
 create database sports;
+
+
+--HIBERNATE AUTO CREATES THIS TABLES:
+/*
 use sports;
 
 CREATE TABLE IF NOT EXISTS `person` (
@@ -26,3 +30,5 @@ INSERT INTO `person` (`name`,`role`,`pwd`) VALUES ('user','USER','user');
 -- INSERT INTO `Fav_Leagues` (`personID`, `leagueID`, `name`, `abbv`) VALUES ('2', '2', 'Bundesliga', 'Ger');
 
 -- INSERT INTO `Fav_Leagues` (`personID`, `leagueID`, `name`, `abbv`) VALUES ('2', '2', 'Bundesliga', 'Ger');
+*/
+

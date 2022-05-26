@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @Controller
-//@RequestMapping("/home")
 public class HomeController {
 
     @Autowired
@@ -41,12 +40,14 @@ public class HomeController {
     public String insertFav(Authentication authentication, @RequestParam String leagueName){
         if(authentication != null){
             Person person = usersRepository.readByName(authentication.getName());
-        
-            teamRepository.insertIntoFavs(person.getPersonID(), leagueName);
-            
-            return "success.html";
+            if (teamRepository.selectFavs(person.getPersonID(), leagueName) == 0){
+                teamRepository.insertIntoFavs(person.getPersonID(), leagueName);
+                return "success.html";
+            }
+            else return "oops.html";
         }
         else return "login.html";
+
     }
     
 }
